@@ -31,7 +31,7 @@ class DashboardScreen extends ConsumerWidget {
                 return Card(
                   child: ListTile(
                     leading: Image.file(
-                      File(report.photopath),
+                      File(report.photoPath),
                       width: 60,
                       height: 60,
                       fit: BoxFit.cover,

@@ -35,7 +35,7 @@ class _EditReportScreenState extends ConsumerState<EditReportScreen> {
       title: widget.report.title,
       description: widget.report.description +
           "\n\nPenyelesaian: ${finishDescController.text}",
-      photopath: finishPhoto?.path ?? widget.report.photopath,
+      photoPath: finishPhoto?.path ?? widget.report.photoPath,
       latitude: widget.report.latitude,
       longitude: widget.report.longitude,
       status: "Selesai",

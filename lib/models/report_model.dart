@@ -1,27 +1,27 @@
 class ReportModel {
-  final int? id;
-  final String title;
-  final String description;
-  final String photopath;
-  final String latitude;
-  final String longitude;
-  final String status;
+  int? id;
+  String title;
+  String description;
+  String photoPath;
+  double latitude;
+  double longitude;
+  String status;
 
   ReportModel({
     this.id,
     required this.title,
     required this.description,
-    required this.photopath,
+    required this.photoPath,
     required this.latitude,
     required this.longitude,
-    this.status = "Pending",
-});
+    required this.status,
+  });
 
-  Map<String, dynamic> toMap() {
+Map<String, dynamic> toMap() {
     return {
       'title': title,
       'description': description,
-      'photopath': photopath,
+      'photopath': photoPath,
       'latitude': latitude,
       'longitude': longitude,
       'status': status,
@@ -33,7 +33,7 @@ class ReportModel {
       id: map['id'],
       title: map['title'],
       description: map['description'],
-      photopath: map['photopath'],
+      photoPath: map['photopath'],
       latitude: map['latitude'],
       longitude: map['longitude'],
       status: map['status'],

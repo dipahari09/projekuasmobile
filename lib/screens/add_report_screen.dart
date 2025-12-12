@@ -65,7 +65,7 @@ class _AddReportScreenState extends ConsumerState<AddReportScreen> {
     final report = ReportModel(
       title: titleController.text,
       description: descController.text,
-      photopath: imageFile!.path,
+      photoPath: imageFile!.path,
       latitude: latitude!,
       longitude: longitude!,
       status: "Pending",

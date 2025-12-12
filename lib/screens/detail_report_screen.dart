@@ -45,12 +45,12 @@ class DetailReportScreen extends ConsumerWidget {
               showDialog(
                 context: context,
                 builder: (_) => Dialog(
-                  child: Image.file(File(report.photopath)),
+                  child: Image.file(File(report.photoPath)),
                 ),
               );
             },
             child: Image.file(
-              File(report.photopath),
+              File(report.photoPath),
               height: 250,
               fit: BoxFit.cover,
             ),
