@@ -121,9 +121,9 @@ class _AddReportScreenState extends ConsumerState<AddReportScreen> {
           SizedBox(height: 16),
 
           Text(
-            lat == null
+            latitude == null
                 ? "Lokasi belum ditandai"
-                : "Lokasi: $lat, $long",
+                : "Lokasi: $latitude, $longitude",
           ),
 
           ElevatedButton(
