@@ -8,7 +8,7 @@ import 'summary_card.dart';
 class DashboardScreen extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final reports = ref.watch(reportProvider); // ✅ Auto-update
+    final reports = ref.watch(reportProvider);
 
     final total = reports.length;
     final selesai = reports.where((r) => r.status == "Selesai").length;
@@ -17,12 +17,11 @@ class DashboardScreen extends ConsumerWidget {
       appBar: AppBar(title: Text("Dashboard Laporan")),
       body: Column(
         children: [
-          // ✅ Header Ringkasan
+
           SummaryCard(total: total, selesai: selesai),
 
           SizedBox(height: 10),
 
-          // ✅ List Laporan
           Expanded(
             child: ListView.builder(
               itemCount: reports.length,
@@ -41,7 +40,6 @@ class DashboardScreen extends ConsumerWidget {
                     title: Text(report.title),
                     subtitle: Text(report.description),
 
-                    // ✅ Status Badge
                     trailing: Container(
                       padding:
                       EdgeInsets.symmetric(horizontal: 12, vertical: 6),
@@ -57,7 +55,6 @@ class DashboardScreen extends ConsumerWidget {
                       ),
                     ),
 
-                    // ✅ Klik → Detail
                     onTap: () {
                       Navigator.push(
                         context,
