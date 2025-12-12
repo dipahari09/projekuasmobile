@@ -66,8 +66,8 @@ class _AddReportScreenState extends ConsumerState<AddReportScreen> {
       title: titleController.text,
       description: descController.text,
       photopath: imageFile!.path,
-      latitude: lat!,
-      longitude: long!,
+      latitude: lat,
+      longitude: long,
       status: "Pending",
     );
 
