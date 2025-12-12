@@ -16,8 +16,8 @@ class _AddReportScreenState extends ConsumerState<AddReportScreen> {
   final descController = TextEditingController();
 
   File? imageFile;
-  double? lat;
-  double? long;
+  double? latitude;
+  double? longitude;
 
   Future<void> pickImage(ImageSource source) async {
     final picker = ImagePicker();
@@ -45,8 +45,8 @@ class _AddReportScreenState extends ConsumerState<AddReportScreen> {
     );
 
     setState(() {
-      lat = pos.latitude;
-      long = pos.longitude;
+      latitude = pos.latitude;
+      longitude = pos.longitude;
     });
   }
 
@@ -54,8 +54,8 @@ class _AddReportScreenState extends ConsumerState<AddReportScreen> {
     if (titleController.text.isEmpty ||
         descController.text.isEmpty ||
         imageFile == null ||
-        lat == null ||
-        long == null) {
+        latitude == null ||
+        longitude == null) {
       ScaffoldMessenger.of(context).showSnackBar(
         SnackBar(content: Text("Semua data wajib diisi")),
       );
@@ -66,8 +66,8 @@ class _AddReportScreenState extends ConsumerState<AddReportScreen> {
       title: titleController.text,
       description: descController.text,
       photopath: imageFile!.path,
-      latitude: lat,
-      longitude: long,
+      latitude: latitude!,
+      longitude: longitude!,
       status: "Pending",
     );
 
