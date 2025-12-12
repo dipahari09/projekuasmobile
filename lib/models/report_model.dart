@@ -4,7 +4,7 @@ class ReportModel {
   final String description;
   final String photopath;
   final String latitude;
-  final String logitude;
+  final String longitude;
   final String status;
 
   ReportModel({
@@ -13,7 +13,7 @@ class ReportModel {
     required this.description,
     required this.photopath,
     required this.latitude,
-    required this.logitude,
+    required this.longitude,
     this.status = "Pending",
 });
 
@@ -23,7 +23,7 @@ class ReportModel {
       'description': description,
       'photopath': photopath,
       'latitude': latitude,
-      'logitude': logitude,
+      'longitude': longitude,
       'status': status,
     };
   }
@@ -35,7 +35,7 @@ class ReportModel {
       description: map['description'],
       photopath: map['photopath'],
       latitude: map['latitude'],
-      logitude: map['logitude'],
+      longitude: map['longitude'],
       status: map['status'],
     );
   }
