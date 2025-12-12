@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'screens/login_screen.dart';
 import 'screens/settings_screen.dart';
-import 'providers/session_provider.dart';
+import 'providers/auth_provider.dart';
 
 void main() {
   runApp(ProviderScope(child: MyApp()));
